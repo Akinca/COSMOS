@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CosmosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SUBSCRIBER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DISABLE" Type="bit" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="COUNTRY_ID" Type="int" />
+    <Property Name="REGION_ID" Type="int" />
+    <Property Name="CITY_ID" Type="int" />
+    <Property Name="COUNTY_ID" Type="int" />
+    <Property Name="COMMENT" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="CITY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+    <Property Name="COMMENTS" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="COUNTRY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+    <Property Name="COMMENTS" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="COUNTY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+    <Property Name="COMMENTS" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="REGION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+    <Property Name="COMMENTS" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="DEVICE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DISABLE" Type="bit" />
+    <Property Name="TYPE_ID" Type="int" />
+    <Property Name="SERIAL_NUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="COMMUNICATION_DATE" Type="datetime" />
+    <Property Name="PHONE_DATA" Type="nvarchar" MaxLength="25" />
+    <Property Name="SUBSCRIBER_ID" Type="int" />
+    <Property Name="COMMENT" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityContainer Name="CosmosModelStoreContainer">
+    <EntitySet Name="SUBSCRIBER" EntityType="Self.SUBSCRIBER" Schema="BACKOFFICE" store:Type="Tables" />
+    <EntitySet Name="CITY" EntityType="Self.CITY" Schema="COMMON" store:Type="Tables" />
+    <EntitySet Name="COUNTRY" EntityType="Self.COUNTRY" Schema="COMMON" store:Type="Tables" />
+    <EntitySet Name="COUNTY" EntityType="Self.COUNTY" Schema="COMMON" store:Type="Tables" />
+    <EntitySet Name="REGION" EntityType="Self.REGION" Schema="COMMON" store:Type="Tables" />
+    <EntitySet Name="DEVICE" EntityType="Self.DEVICE" Schema="SCADA" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

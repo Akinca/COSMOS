@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CosmosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SUBSCRIBER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DISABLE" Type="Boolean" />
+    <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="COUNTRY_ID" Type="Int32" />
+    <Property Name="REGION_ID" Type="Int32" />
+    <Property Name="CITY_ID" Type="Int32" />
+    <Property Name="COUNTY_ID" Type="Int32" />
+    <Property Name="COMMENT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CITY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="COMMENTS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="COUNTRY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="COMMENTS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="COUNTY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="COMMENTS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="REGION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="COMMENTS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DEVICE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DISABLE" Type="Boolean" />
+    <Property Name="TYPE_ID" Type="Int32" />
+    <Property Name="SERIAL_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COMMUNICATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PHONE_DATA" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="SUBSCRIBER_ID" Type="Int32" />
+    <Property Name="COMMENT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CosmosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SUBSCRIBER" EntityType="Self.SUBSCRIBER" />
+    <EntitySet Name="CITY" EntityType="Self.CITY" />
+    <EntitySet Name="COUNTRY" EntityType="Self.COUNTRY" />
+    <EntitySet Name="COUNTY" EntityType="Self.COUNTY" />
+    <EntitySet Name="REGION" EntityType="Self.REGION" />
+    <EntitySet Name="DEVICE" EntityType="Self.DEVICE" />
+  </EntityContainer>
+</Schema>

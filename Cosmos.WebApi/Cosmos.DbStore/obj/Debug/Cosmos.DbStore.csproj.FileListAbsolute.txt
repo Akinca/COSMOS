@@ -1,0 +1,12 @@
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\bin\Debug\Cosmos.DbStore.dll.config
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\bin\Debug\Cosmos.DbStore.dll
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\bin\Debug\Cosmos.DbStore.pdb
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\bin\Debug\EntityFramework.dll
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\bin\Debug\EntityFramework.SqlServer.dll
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\bin\Debug\EntityFramework.xml
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\bin\Debug\EntityFramework.SqlServer.xml
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\obj\Debug\Cosmos.DbStore.csprojResolveAssemblyReference.cache
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\obj\Debug\Cosmos.DbStore.csproj.CoreCompileInputs.cache
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\obj\Debug\Cosmos.DbStore.csproj.CopyComplete
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\obj\Debug\Cosmos.DbStore.dll
+D:\PROJECT\COSMOS\Cosmos.WebApi\Cosmos.DbStore\obj\Debug\Cosmos.DbStore.pdb

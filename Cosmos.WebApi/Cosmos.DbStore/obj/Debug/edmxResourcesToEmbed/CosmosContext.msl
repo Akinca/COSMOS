@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CosmosModelStoreContainer" CdmEntityContainer="CosmosEntities">
+    <EntitySetMapping Name="SUBSCRIBER">
+      <EntityTypeMapping TypeName="CosmosModel.SUBSCRIBER">
+        <MappingFragment StoreEntitySet="SUBSCRIBER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DISABLE" ColumnName="DISABLE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COUNTRY_ID" ColumnName="COUNTRY_ID" />
+          <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
+          <ScalarProperty Name="CITY_ID" ColumnName="CITY_ID" />
+          <ScalarProperty Name="COUNTY_ID" ColumnName="COUNTY_ID" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CITY">
+      <EntityTypeMapping TypeName="CosmosModel.CITY">
+        <MappingFragment StoreEntitySet="CITY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COUNTRY">
+      <EntityTypeMapping TypeName="CosmosModel.COUNTRY">
+        <MappingFragment StoreEntitySet="COUNTRY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COUNTY">
+      <EntityTypeMapping TypeName="CosmosModel.COUNTY">
+        <MappingFragment StoreEntitySet="COUNTY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGION">
+      <EntityTypeMapping TypeName="CosmosModel.REGION">
+        <MappingFragment StoreEntitySet="REGION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEVICE">
+      <EntityTypeMapping TypeName="CosmosModel.DEVICE">
+        <MappingFragment StoreEntitySet="DEVICE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DISABLE" ColumnName="DISABLE" />
+          <ScalarProperty Name="TYPE_ID" ColumnName="TYPE_ID" />
+          <ScalarProperty Name="SERIAL_NUMBER" ColumnName="SERIAL_NUMBER" />
+          <ScalarProperty Name="COMMUNICATION_DATE" ColumnName="COMMUNICATION_DATE" />
+          <ScalarProperty Name="PHONE_DATA" ColumnName="PHONE_DATA" />
+          <ScalarProperty Name="SUBSCRIBER_ID" ColumnName="SUBSCRIBER_ID" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
